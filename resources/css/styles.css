@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #E8D6D2;
+    font-family: "Noto Sans Mono", monospace;
+}
+
+html, body{
+    font-size: 16;
+    box-sizing: border-box;
+    background-color: #131116;
+}
+
+header{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: #5A1307;
+    z-index: 10;
+}
+
+nav{
+    display: flex;
+    flex:1;
+    justify-content: space-between;
+    align-items: center;
+    height: 2em;
+    padding: 1em;
+}
+
+nav menu{
+    list-style: none;
+}
+menu li{
+    display: inline-flex;
+    padding: 1em;
+    transition-duration: 300ms;
+}
+
+menu li:hover{
+    background-color: #BC815B;
+}
+
+main{
+    position: relative;
+    top: 4em;
+}
+
+h1, h2{
+    font-family: 'Besley', Courier, monospace;
+    font-weight: 300;
+}
+
+h2{
+    font-size: 2em;
+}
+
+.mobile{
+    display:none;
+}
+.content{
+    display: flex;
+    width: 100%;
+}
+
+#the-list{
+    background-color: #00000080;
+}
+
+#about img, #the-list img{
+    display: inline-flex;
+    width: 40%;
+}
+
+.textcontainer{
+    display: inline-flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 2em 4em;
+    gap: 1em;
+    font-size: 1.15em;
+}
+
+.textcontainer blockquote{
+    color: #BC815B;
+    font-size: 2em;
+    text-indent: 2em;
+    font-style: italic;
+}
+
+.textcontainer h2{
+    text-align: center;
+}
+
+#groupphotos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 1em;
+}
+
+#groupphotos img{
+    display: inline-flex;
+    width: 32%;
+    min-width: 200px;
+}
+
+footer{
+    position:relative;
+    top: 4em;
+    padding: 1em 1em;
+    background-color: #5A1307;
+}
+
+@media screen and (max-width: 470px){
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
+    nav.mobile{
+        height: 4em;
+    }
+    nav.mobile li{
+        padding: 0.1em;
+    }
+    nav.mobile h1{
+        font-size: 1.5em;
+    }
+    nav.mobile img{
+        height: 1.75em;
+    }
+
+    main{
+        top: 4em;
+        gap: 1em;
+    }
+
+    #about img, #the-list img{
+        display: none;
+    }
+
+    #about{
+        background: center/ cover linear-gradient(#131116dd, #13111644), url(../media/img/vampirebook.webp);
+        padding: 30% 0;
+    }
+    #the-list{
+        background: center/ cover linear-gradient(#5A1307dd, #5A130744), url(../media/img/thelist.webp);
+        padding: 30% 0;
+    }
+
+    #meeting-info{
+        padding: 3em 2em;
+    }
+    #groupphotos img{
+        width: 100%;
+    }
+
+    footer{
+        position: relative;
+        top: 4em;
+        height: 2em;
+        font-size: 1em;
+    }
+}
